@@ -1,4 +1,4 @@
-# Personality
+# Watson Personality
 
 Gets a Twitter user's personality profile using IBM's Watson.
 
