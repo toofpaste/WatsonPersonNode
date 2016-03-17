@@ -1,7 +1,7 @@
 {
   "name": "watson-personality",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.2",
+  "description": "Gets a Twitter user's personality profile using IBM's Watson.",
   "main": "personality.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -12,5 +12,9 @@
     "dotenv": "^2.0.0",
     "twit": "^2.2.3",
     "watson-developer-cloud": "^1.3.0"
+  },
+  "repository" :
+    { "type" : "git",
+    "url" : "https://github.com/BillyZac/watson-personality"
   }
 }
