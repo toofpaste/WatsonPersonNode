@@ -1,6 +1,6 @@
 {
   "name": "watson-personality",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Gets a Twitter user's personality profile using IBM's Watson.",
   "main": "personality.js",
   "scripts": {

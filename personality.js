@@ -21,8 +21,8 @@ function personality(username) {
       version: 'v2'
     })
 
-    var tpath = getUserHandle('@billyzacsmith').tpath
-    var options = getUserHandle('@billyzacsmith').options
+    var tpath = getUserHandle(username).tpath
+    var options = getUserHandle(username).options
 
     T.get(tpath, options, function(error, data) {
       if (error) return reject(error)
