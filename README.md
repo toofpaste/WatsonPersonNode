@@ -25,6 +25,8 @@ after you set up your .env folder
 2. run - npm install
 3. copy everything in "personality.js" and paste it over everything in this file "node_modules/watson-personality/personality.js" and hit save
 4. run - node app.js
+    or - npm run start
+    or - npm start
 
 
 
