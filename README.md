@@ -1,4 +1,55 @@
 # Watson Personality
+SET UP IS FUCKIN WEIRD
+
+1. SETUP A .env (in the top level)FILE LIKE THIS
+
+url=<YOUR WATSON API URL>
+USERNAME=apikey
+PASSWORD=<WATSON API KEY>
+CONSUMER_KEY=<TWITTER CONSUMER KEY>
+CONSUMER_SECRET=<TWITTER CONSUMER SECRET KEY>
+ACCESS_TOKEN_KEY=<TWITTER ACCESS TOKEN>
+ACCESS_TOKEN_SECRET=<TWITTER ACCESS TOKEN SECRET>
+
+PERSONALITY_INSIGHTS_USERNAME=<LEAVE BLANK AND DELETE THIS>
+PERSONALITY_INSIGHTS_PASSWORD=<LEAVE BLANK AND DELETE THIS>
+PERSONALITY_INSIGHTS_URL=<YOUR WATSON API URL>
+PERSONALITY_INSIGHTS_IAM_APIKEY=<WATSON API KEY>
+# twitter credentials
+# see https://apps.twitter.com/
+TWITTER_CONSUMER_KEY=<TWITTER CONSUMER KEY>
+TWITTER_CONSUMER_SECRET=<TWITTER CONSUMER SECRET KEY>
+
+after you set up your .env folder
+
+2. run - npm install
+3. copy everything in "personality.js" and paste it over everything in this file "node_modules/watson-personality/personality.js" and hit save
+4. run - node app.js
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Gets a Twitter user's personality profile using IBM's Watson.
 
