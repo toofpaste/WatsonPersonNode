@@ -20,6 +20,7 @@ function personality(username) {
       password: process.env.PASSWORD,
       version: 'v2'
     })
+;    console.log(personality_insights);
 
     var tpath = getUserHandle(username).tpath
     var options = getUserHandle(username).options
@@ -38,7 +39,7 @@ function personality(username) {
         function (err, response) {
           if (error) return reject(error)
           else
-            // console.log((response.tree.children[1].children[0].children));
+             console.log((response.tree.children[1].children[0].children));
             var personalityProfile = {
               traits: response.tree.children[0].children[0].children,
               needs: response.tree.children[1].children[0].children
