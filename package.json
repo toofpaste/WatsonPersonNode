@@ -12,7 +12,7 @@
   "dependencies": {
     "dotenv": "^2.0.0",
     "twit": "^2.2.3",
-    "watson-developer-cloud": "^1.3.0",
+    "watson-developer-cloud": "^3.18.1",
     "watson-personality": "^1.0.3"
   },
   "repository": {

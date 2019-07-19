@@ -1,4 +1,6 @@
 module.exports = personality
+const PersonalityInsightsV3 = require('watson-developer-cloud/personality-insights/v3');
+
 
 function personality(username) {
   return new Promise(function(resolve, reject) {
@@ -15,11 +17,15 @@ function personality(username) {
       timeout_ms: 60*1000
     })
 
-    var personality_insights = watson.personality_insights({
-      username: process.env.USERNAME,
-      password: process.env.PASSWORD,
-      version: 'v2'
-    })
+    var personality_insights = new PersonalityInsightsV3({
+      // If unspecified here, the PERSONALITY_INSIGHTS_USERNAME and
+      // PERSONALITY_INSIGHTS_PASSWORD env properties will be checked
+      // After that, the SDK will fall back to the bluemix-provided
+      // VCAP_SERVICES environment property
+      // username: '<username>',
+      // password: '<password>',
+      version: '2017-10-13',
+    });
 ;    console.log(personality_insights);
 
     var tpath = getUserHandle(username).tpath
@@ -32,20 +38,19 @@ function personality(username) {
         tweets.push(data[i].text);
       }
 
-      var textToAnalyze = tweets.join(' ');
 
+      var textToAnalyze = tweets.join(' ');
       personality_insights.profile({
-        text: textToAnalyze },
-        function (err, response) {
-          if (error) return reject(error)
-          else
-             console.log((response.tree.children[1].children[0].children));
-            var personalityProfile = {
-              traits: response.tree.children[0].children[0].children,
-              needs: response.tree.children[1].children[0].children
-            }
+            text: textToAnalyze },
+          function (err, response) {
+            if (error) return reject(error)
+            else
+              var personalityProfile = {
+                traits: response.personality,
+                needs: response.needs
+              }
             resolve (personalityProfile)
-      })
+          })
     })
   })
 }
